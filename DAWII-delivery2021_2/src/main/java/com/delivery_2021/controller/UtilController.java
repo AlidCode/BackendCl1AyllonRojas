@@ -39,21 +39,5 @@ public class UtilController {
 	
 	
 
-	@GetMapping("/listaDepartamentos")
-	@ResponseBody
-	public List<String> listaDepartamentos() {
-		return ubigeoService.listaDepartamentos();
-	}
-
-	@GetMapping("/listaProvincias/{paramDep}")
-	@ResponseBody
-	public List<String> listaProvincias(@PathVariable("paramDep") String dep) {
-		return ubigeoService.listaProvincias(dep);
-	}
-
-	@GetMapping("/listaDistritos/{paramDep}/{paramProv}")
-	@ResponseBody
-	public List<Ubigeo> listaDistritos(@PathVariable("paramDep") String dep, @PathVariable("paramProv") String prov) {
-		return ubigeoService.listaDistritos(dep, prov);
-	}
+	
 }
